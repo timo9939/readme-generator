@@ -3,8 +3,6 @@ const inquirer=require('inquirer');
 const fs =require('fs')
 // TODO: Create an array of questions for user input
 
-const element=['Title','Description','Installation','Usage','Credit','Test','License','GitHub','Email']
-
 inquirer
 .prompt([
     {
@@ -42,6 +40,11 @@ inquirer
         name:'license',
         message:'Input the license',
         choices:["None","Apache--license--2.0","Artistic--license--2.0","MIT"]
+    },
+    {
+        type:'input',
+        name:'feature',
+        message:'Input the features of your apps'
     },
     {
         type:'input',
@@ -90,15 +93,15 @@ ${reaction.usage}
 ## Credits
 ${reaction.credit}
 
-## Tests
-${reaction.tests}
+## Test
+${reaction.Test}
 
 ## License & Badges
 ${reaction.license}
 
 
 ## Features
-If your project has a lot of features, list them here.
+${reaction.feature}
 
 ## GitHub
 https://github.com/${reaction.gitHubUsername}
